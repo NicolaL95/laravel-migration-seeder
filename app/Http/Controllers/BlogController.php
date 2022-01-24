@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Flight;
+use App\Models\Blog;
 use Illuminate\Http\Request;
 
-class FlightController extends Controller
+class BlogController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,8 @@ class FlightController extends Controller
      */
     public function index()
     {
-        $flight_packages = Flight::all();
-        
-        return view('package', compact('flight_packages'));
+        $blogs = Blog::all();
+        return view('blog', compact('blogs'));
     }
 
     /**
@@ -43,21 +42,21 @@ class FlightController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Flight  $flight
+     * @param  \App\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function show(Flight $flight)
+    public function show(Blog $blog)
     {
-         return view('flight_det', compact('flight'));
+        return view('blog_det', compact('blog'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Flight  $flight
+     * @param  \App\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function edit(Flight $flight)
+    public function edit(Blog $blog)
     {
         //
     }
@@ -66,10 +65,10 @@ class FlightController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Flight  $flight
+     * @param  \App\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Flight $flight)
+    public function update(Request $request, Blog $blog)
     {
         //
     }
@@ -77,10 +76,10 @@ class FlightController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Flight  $flight
+     * @param  \App\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Flight $flight)
+    public function destroy(Blog $blog)
     {
         //
     }
