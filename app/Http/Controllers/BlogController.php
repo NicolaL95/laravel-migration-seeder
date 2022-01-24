@@ -13,7 +13,7 @@ class BlogController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {        
         $blogs = Blog::all();
         return view('blog', compact('blogs'));
     }

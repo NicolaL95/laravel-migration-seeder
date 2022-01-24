@@ -1,5 +1,5 @@
-@extends('layouts.app')
+@extends('layouts.app_blog')
 @section('main')
 <h2>{{$blog->title}}</h2>
-<h2>{{$flight->description}}</h2>
+<h2>{{$blog->description}}</h2>
 @endsection

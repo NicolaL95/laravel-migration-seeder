@@ -14,7 +14,7 @@ class BlogSeeder extends Seeder
     {
          for ($i=0; $i < 10; $i++) { 
             $newblog = new Blog();
-            $newblog->title = $faker->regexify();
+            $newblog->title = $faker->word(1);
             $newblog->description = $faker->word(30); 
             $newblog->save();
         } 
