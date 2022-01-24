@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'FlightController@index')->name('flight.index');
-Route::get('/{flight}', 'FlightController@show')->name('flight.show');
+Route::get('/flight/{flight}', 'FlightController@show')->name('flight.show');
 
 Route::get('/blog', 'BlogController@index')->name('blog.index');
 Route::get('/blog/{blog}', 'BlogController@show')->name('blog.show');
